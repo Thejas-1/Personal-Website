@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+ <html>
+ <head>
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+ <title>
+ THEJAS NAIK
+ </title>
+ </head>
+ <body>
+ 
+ <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+  <button class="tablinks" onclick="openCity(event, 'Skills')">Skills</button>
+  <button class="tablinks" onclick="openCity(event, 'Technical Projects')">Technical Projects
+</button>
+  <button class="tablinks" onclick="openCity(event, 'Hobbies')">Hobbies</button>
+</div>
+
+<div id="About Me" class="tabcontent">
+  <h3>About Me</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Skills" class="tabcontent">
+  <h3>Skills</h3>
+  <p>Soccer</p>
+</div>
+
+<div id="Technical Projects" class="tabcontent">
+  <h3>Technical Projects</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div> 
+
+<div id="Hobbies" class="tabcontent">
+  <h3>Hobbies</h3>
+  <p>FDFGDFGDFG</p>
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
