@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
  <html>
  <head>
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -10,6 +10,7 @@
  </head>
  <body>
  
+ <img src="{% static "css/MyPhoto.jpg" %}" alt="My Image" height="300" width="300"/>
  <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
   <button class="tablinks" onclick="openCity(event, 'Skills')">Skills</button>
