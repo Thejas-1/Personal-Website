@@ -37,5 +37,6 @@ div.tab button.active {
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 400px;
+    height: auto;
+    font-style: italic;
 }
